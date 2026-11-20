@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriShare | Share Food, Share Hope</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#">🥗 NutriShare</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#donations">Available food</a>
+      <a href="#donate">Donate food</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">SMART FOOD DONATION & WASTE MANAGEMENT</p>
+        <h1>Share food.<br><span>Spread kindness.</span></h1>
+        <p>Connect surplus food with people and organizations who need it. Every donation can make a difference.</p>
+        <a class="primary-button" href="#donate">Donate food</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">🥕 🍎 🥦</div>
+    </section>
+
+    <section class="section" id="about">
+      <p class="eyebrow">OUR PURPOSE</p>
+      <h2>Good food should never go to waste.</h2>
+      <p class="section-intro">NutriShare is a project concept that helps food donors share surplus food information with NGOs and volunteers.</p>
+      <div class="feature-grid">
+        <article class="feature-card"><span>🤝</span><h3>Connect</h3><p>Bring donors and food-support organizations together.</p></article>
+        <article class="feature-card"><span>🍱</span><h3>Share</h3><p>Post details about surplus food available for donation.</p></article>
+        <article class="feature-card"><span>🌍</span><h3>Reduce waste</h3><p>Help useful food reach people instead of being discarded.</p></article>
+      </div>
+    </section>
+
+    <section class="section donations-section" id="donations">
+      <div class="section-heading">
+        <div><p class="eyebrow">COMMUNITY DONATIONS</p><h2>Available food</h2></div>
+        <input id="searchInput" type="search" placeholder="Search food or location..." aria-label="Search donations">
+      </div>
+      <div id="donationList" class="donation-grid">
+        <p class="empty-state">No demo donations yet. Add one using the form below.</p>
+      </div>
+    </section>
+
+    <section class="section form-section" id="donate">
+      <div class="form-copy">
+        <p class="eyebrow">MAKE A DIFFERENCE</p>
+        <h2>Post a food donation</h2>
+        <p>Enter the basic details of the surplus food. This demo saves entries in this browser only.</p>
+      </div>
+      <form id="donationForm">
+        <label>Food name<input name="food" required placeholder="e.g. Vegetable rice"></label>
+        <div class="form-row">
+          <label>Quantity<input name="quantity" required placeholder="e.g. 10 meals"></label>
+          <label>Category
+            <select name="category"><option>Cooked food</option><option>Fruits and vegetables</option><option>Bakery</option><option>Packaged food</option><option>Other</option></select>
+          </label>
+        </div>
+        <label>Pickup location<input name="location" required placeholder="Enter area or address"></label>
+        <label>Expiry / best-before time<input name="expiry" type="datetime-local" required></label>
+        <label>Additional details<textarea name="details" rows="3" placeholder="Any important information"></textarea></label>
+        <button class="primary-button" type="submit">Add donation</button>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><strong>NutriShare — Group Sixteen</strong><p>Smart Food Donation and Waste Management System</p><small>College project demonstration. Not a live food collection service.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
