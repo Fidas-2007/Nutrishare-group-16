@@ -13,6 +13,7 @@
       <a href="#about">About</a>
       <a href="#donations">Available food</a>
       <a href="#donate">Donate food</a>
+      <a href="#account">Login / Register</a>
     </nav>
   </header>
 
@@ -25,6 +26,38 @@
         <a class="primary-button" href="#donate">Donate food</a>
       </div>
       <div class="hero-art" aria-hidden="true">🥕 🍎 🥦</div>
+    </section>
+
+
+    <section class="section account-section" id="account">
+      <div class="account-heading">
+        <p class="eyebrow">NUTRISHARE ACCOUNT</p>
+        <h2>Login or create an account</h2>
+        <p class="section-intro">Use your email address and password to access your demo account.</p>
+      </div>
+      <div class="account-box">
+        <div class="account-tabs">
+          <button type="button" class="account-tab active" id="loginTab">Login</button>
+          <button type="button" class="account-tab" id="registerTab">Register</button>
+        </div>
+        <form id="loginForm" class="account-form">
+          <label>Email ID<input type="email" name="email" required placeholder="Enter your email address"></label>
+          <label>Password<input type="password" name="password" required placeholder="Enter your password"></label>
+          <button class="primary-button" type="submit">Login</button>
+          <p class="form-message" id="loginMessage" role="status"></p>
+        </form>
+        <form id="registerForm" class="account-form" hidden>
+          <label>Email ID<input type="email" name="email" required placeholder="Enter your email address"></label>
+          <label>Password<input type="password" name="password" required minlength="6" placeholder="Create a password (at least 6 characters)"></label>
+          <button class="primary-button" type="submit">Register</button>
+          <p class="form-message" id="registerMessage" role="status"></p>
+        </form>
+        <div id="signedInPanel" class="signed-in-panel" hidden>
+          <h3>You are logged in!</h3>
+          <p id="signedInEmail"></p>
+          <button class="primary-button" type="button" id="logoutButton">Logout</button>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="about">
